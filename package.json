@@ -1,10 +1,10 @@
 {
   "name": "web-components-content",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "WebComponents base components ",
   "main": "./build/index.js",
   "scripts": {
-    "prepare": "npx tsc",
+    "prepublish": "npm run build",
     "build": "npx tsc",
     "watch": "npx tsc -w",
     "test": "echo \"Error: no test specified\""
