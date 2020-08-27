@@ -1,0 +1,31 @@
+{
+  "name": "web-components-content",
+  "version": "1.0.0",
+  "description": "WebComponents base components ",
+  "main": "./build/index.js",
+  "scripts": {
+    "prepare": "npx tsc",
+    "build": "npx tsc",
+    "watch": "npx tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zy445566/web-components-content.git"
+  },
+  "keywords": [
+    "web",
+    "base",
+    "components",
+    "WebComponents"
+  ],
+  "author": "zy445566",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zy445566/web-components-content/issues"
+  },
+  "homepage": "https://github.com/zy445566/web-components-content#readme",
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  }
+}
