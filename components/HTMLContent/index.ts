@@ -2,7 +2,7 @@ export default class HTMLContent extends HTMLElement {
     shadow:ShadowRoot;
     constructor() {
         super();
-        this.shadow = this.attachShadow( { mode: 'open' } );
+        this.shadow = null;
     }
     getRenderStr(htmlStr:string,dataObj:Object={}):string {
         let dataStr = ''
@@ -13,6 +13,12 @@ export default class HTMLContent extends HTMLElement {
         return compileHtml();
     }
     render(htmlStr:string,dataObj:Object={}):void {
+        /**
+         * 由于constructor元素还未初始化挂载
+         * 所以this.attachShadow在constructor可能获取不到挂载
+         * 所以建议在connectedCallback生命周期再执行render
+         */
+        if(!this.shadow) {this.shadow = this.attachShadow( { mode: 'open' } );}
         this.shadow.innerHTML = this.getRenderStr(htmlStr,dataObj);
     }
 
