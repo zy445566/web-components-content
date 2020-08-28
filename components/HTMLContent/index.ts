@@ -12,13 +12,13 @@ export default class HTMLContent extends HTMLElement {
         const compileHtml = new Function(dataStr+'return `'+htmlStr.replace(/`/g,'\\`')+'`;');
         return compileHtml();
     }
-    render(htmlStr:string,dataObj:Object={}):void {
+    render(htmlStr:string,dataObj:Object={}, mode:ShadowRootMode='open'):void {
         /**
          * 由于constructor元素还未初始化挂载
          * 所以this.attachShadow在constructor可能获取不到挂载
          * 所以建议在connectedCallback生命周期再执行render
          */
-        if(!this.shadow) {this.shadow = this.attachShadow( { mode: 'open' } );}
+        if(!this.shadow) {this.shadow = this.attachShadow( { mode } );}
         this.shadow.innerHTML = this.getRenderStr(htmlStr,dataObj);
     }
 

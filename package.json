@@ -1,6 +1,6 @@
 {
   "name": "web-components-content",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "WebComponents base components ",
   "main": "build/index.js",
   "scripts": {
