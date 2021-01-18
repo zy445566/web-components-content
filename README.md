@@ -60,7 +60,7 @@ window.customElements.define('my-router', MyRouter);
 window.customElements.define('my-hash-route', MyHashRoute);
 ```
 
-### MyHashRoute
+### MyBrowseRoute
 ```html
 <!-- app.html -->
 <my-router>
